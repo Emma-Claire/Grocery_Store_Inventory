@@ -1,11 +1,12 @@
 module GroceryStore
 
   class Product
-    attr_accessor :product_id, :product_name, :product_price, :product_aisle, :product_quantity
+    attr_accessor :store_id, :product_id, :product_name, :product_price, :product_aisle, :product_quantity
     def initialize(product_info)
-      @product_id = product_info[:product_id]
+      @store_id = product_info[:store_id]
+      @product_id = product_info[:product_id].to_i
       @product_name = product_info[:product_name]
-      @product_price = product_info[:product_price]
+      @product_price = product_info[:product_price].to_f
       @product_aisle = product_info[:product_aisle]
       @product_quantity = product_info[:product_quantity]
       @discount_price = product_info[:discount]
@@ -15,8 +16,11 @@ module GroceryStore
       #outputs list of all products and info
     end
 
-    def self.find(product_name)
+    def self.find(product_id)
       #finds a product by name
+
+
+      # should retunr instance od Product
     end
 
     def final_price
