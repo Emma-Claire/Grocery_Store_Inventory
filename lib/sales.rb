@@ -3,16 +3,13 @@ module GroceryStore
     def initialize(collection_of_prod_ids)
       @sale_id = sale_id
       @sold_products = collection_of_prod_ids.map { |id| Product.find(id)}
-      @sale_date = Date.new()
     end
 
-    def self.all(sale_date = nil)
-      if sale_date
-      else
-      end
+    def self.all
+      
     end
 
-    def self.by_date(sale_date)
+    def self.find(sale_id)
     end
 
 

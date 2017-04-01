@@ -67,7 +67,7 @@ describe "GroceryStore::Product" do
     end
   end
 
-  # describe "final_price" do
+  # describe "discounted_or_full_price" do
   #
   # it "returns price of product" do
   # end

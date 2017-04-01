@@ -25,12 +25,12 @@ module GroceryStore
     # binding.pry
 
     def self.find(product_id)
-    products = Product.all
-    return products.find {|product| product.product_id == product_id}
+      products = Product.all
+      return products.find {|product| product.product_id == product_id}
     end
 
-    # def final_price
-    #   #is it on sale? if discount_price != nill then product_price = discount_price
-    # end
+    def discounted_or_full_price
+        #is it on sale? if discount_price != nill then product_price = discount_price
+    end
   end
 end
