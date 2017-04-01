@@ -1,6 +1,4 @@
-#this is where costumer purchase method should be
-#purchased
-#if product is purchased it should be deleted from inventory
+
 module GroceryStore
 
   class Store

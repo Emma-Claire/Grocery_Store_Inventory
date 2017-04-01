@@ -1,3 +1,5 @@
+require 'csv'
+
 module GroceryStore
 
   class Product
@@ -9,7 +11,6 @@ module GroceryStore
       @product_price = product_info[:product_price].to_f
       @product_aisle = product_info[:product_aisle]
       @product_quantity = product_info[:product_quantity]
-      @discount_price = product_info[:discount]
     end
 
     def self.all
@@ -18,15 +19,11 @@ module GroceryStore
 
     def self.find(product_id)
       #finds a product by name
-
-
       # should retunr instance od Product
     end
 
     def final_price
       #is it on sale? if discount_price != nill then product_price = discount_price
     end
-
-
   end
 end

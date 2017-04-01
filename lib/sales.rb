@@ -1,7 +1,6 @@
 module GroceryStore
   class Sales
-
-    def initialize([collection_of_prod_ids])
+    def initialize(collection_of_prod_ids)
       @sale_id = sale_id
       @sold_products = collection_of_prod_ids.map { |id| Product.find(id)}
       @sale_date = Date.new()
@@ -9,9 +8,8 @@ module GroceryStore
 
     def self.all(sale_date = nil)
       if sale_date
-        #blah
       else
-        #all
+      end
     end
 
     def self.by_date(sale_date)
@@ -21,7 +19,6 @@ module GroceryStore
     def costumer_total
       #takes list of product_ids and returns total product_price
       @sold_products.reduce{ |instance| instance.product_price }
-
     end
 
     def costumer_savings
