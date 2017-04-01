@@ -1,17 +1,8 @@
 module GroceryStore
-  class Sales
+  class Sale
     def initialize(collection_of_prod_ids)
-      @sale_id = sale_id
       @sold_products = collection_of_prod_ids.map { |id| Product.find(id)}
     end
-
-    def self.all
-      
-    end
-
-    def self.find(sale_id)
-    end
-
 
     def costumer_total
       #takes list of product_ids and returns total product_price

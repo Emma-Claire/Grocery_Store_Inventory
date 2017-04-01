@@ -1,0 +1,28 @@
+store_id, product_id,product_name,aisle_id,aisle_name,product_quantity
+98776,1,Apple,A,Fruits,12
+98776,2,Orange,A,Fruits,76
+98776,3,Strawberry,A,Fruits,87
+98776,4,Papaya,A,Fruits,9
+98776,5,Mango,A,Fruits,27
+98776,6,Banana,A,Fruits,54
+98776,7,Lemon,A,Fruits,48
+98776,8,Cookie,B,Bakery,66
+98776,9,Baguette,B,Bakery,18
+98776,10,Cake,B,Bakery,71
+98776,11,Bun,B,Bakery,16
+98776,12,Egg,C,Dairy,56
+98776,13,Milk,C,Dairy,44
+98776,14,Cheese,C,Dairy,11
+98776,15,Pasta,D,Packaged Food,4
+98776,16,Canned Soup,D,Packaged Food,1
+98776,17,Utensils,E,Miscellaneous,79
+98776,18,Napkins,E,Miscellaneous,22
+98776,19,Baking Powder,F,Baking,65
+98776,20,Flour,F,Baking,59
+98776,21,Chocolate,G,Candy,50
+98776,22,Chips,H,Snacks,76
+98776,23,Popcorn,H,Snacks,41
+98776,24,Peanut Butter,H,Snacks,69
+98776,25,Potato,I,Vegetables,80
+98776,26,Lettuce,I,Vegetables,94
+98776,27,Gardenia,J,Flowers,44
