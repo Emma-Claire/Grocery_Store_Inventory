@@ -24,8 +24,8 @@ module GroceryStore
     # binding.pry
 
     def self.find(product_id)
-      #finds a product
-      # should retunr instance od Product
+    products = Product.all
+    return products.find {|product| product.product_id == product_id}
     end
 
     def final_price
