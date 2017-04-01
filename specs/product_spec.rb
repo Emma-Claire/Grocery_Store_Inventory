@@ -2,7 +2,7 @@ require_relative 'spec_helper'
 
 describe "GroceryStore::Product" do
 
-  let(:new_product) {GroceryStore::Product.new({store_id: 12345, product_id: 101, product_name: 'cookies', product_price: 15.0, product_aisle: 'bakery', product_quantity: 123, discount_price: 0.0})}
+  let(:new_product) {GroceryStore::Product.new({store_id: 12345, product_id: 101, product_name: 'cookies', product_price: 15.0, product_aisle: 'bakery', product_quantity: 123, discount_price: 4.5})}
 
   describe "#initialize" do
     it "must be an instance Product class" do
@@ -27,6 +27,9 @@ describe "GroceryStore::Product" do
     end
     it "takes an Integer for product_quantity" do
       new_product.product_quantity.must_be_instance_of Integer
+    end
+    it "takes a float for discount_price" do
+      new_product.discount_price.must_be_instance_of Float
     end
   end
 
@@ -62,6 +65,16 @@ describe "GroceryStore::Product" do
     it "if product_id does not exist returns nil" do
       GroceryStore::Product.find(99).must_be_nil
     end
-
   end
+
+  # describe "final_price" do
+  #
+  # it "returns price of product" do
+  # end
+  #
+  # it "takes in user input for discount price" do
+  # end
+  #
+  # it "overrides product_price if discount_price is given" do
+  # end
 end

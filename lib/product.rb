@@ -4,7 +4,7 @@ require 'csv'
 module GroceryStore
 
   class Product
-    attr_accessor :store_id, :product_id, :product_name, :product_price, :product_aisle, :product_quantity
+    attr_accessor :store_id, :product_id, :product_name, :product_price, :product_aisle, :product_quantity, :discount_price
     def initialize(product_info)
       @store_id = product_info[:store_id].to_i
       @product_id = product_info[:product_id].to_i
@@ -12,6 +12,7 @@ module GroceryStore
       @product_price = product_info[:product_price].to_f
       @product_aisle = product_info[:product_aisle]
       @product_quantity = product_info[:product_quantity].to_i
+      @discount_price = product_info[:discount_price]
     end
 
     def self.all
@@ -28,8 +29,8 @@ module GroceryStore
     return products.find {|product| product.product_id == product_id}
     end
 
-    def final_price
-      #is it on sale? if discount_price != nill then product_price = discount_price
-    end
+    # def final_price
+    #   #is it on sale? if discount_price != nill then product_price = discount_price
+    # end
   end
 end

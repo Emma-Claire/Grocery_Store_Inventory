@@ -1,28 +1,28 @@
-store_id, product_id,product_name,product_price,product_aisle,product_quantity
-98776,1,Apple,83.86,Fruits,12
-98776,2,Orange,66.68,Fruits,76
-98776,3,Strawberry,39.48,Fruits,87
-98776,4,Papaya,65.99,Fruits,9
-98776,5,Mango,36.05,Fruits,27
-98776,6,Banana,97.39,Fruits,54
-98776,7,Lemon,85.12,Fruits,48
-98776,8,Cookie,99.53,Bakery,66
-98776,9,Baguette,41.77,Bakery,18
-98776,10,Cake,69.17,Bakery,71
-98776,11,Bun,92.9,Bakery,16
-98776,12,Egg,15.3,Dairy,56
-98776,13,Milk,77.09,Dairy,44
-98776,14,Cheese,36.81,Dairy,11
-98776,15,Pasta,17.84,Packaged Food,4
-98776,16,Canned Soup,75.94,Packaged Food,1
-98776,17,Utensils,66.71,Miscellaneous,79
-98776,18,Napkins,88.97,Miscellaneous,22
-98776,19,Baking Powder,13.86,Baking,65
-98776,20,Flour,90.68,Baking,59
-98776,21,Chocolate,28.62,Candy,50
-98776,22,Chips,93.9,Snacks,76
-98776,23,Popcorn,4.2,Snacks,41
-98776,24,Peanut Butter,50.72,Snacks,69
-98776,25,Potato,4.64,Vegetables,80
-98776,26,Lettuce,19.89,Vegetables,94
-98776,27,Gardenia,61.21,Flowers,44
+store_id, product_id,product_name,product_price,product_aisle,product_quantity,discount_price
+98776,1,Apple,83.86,Fruits,12,34.55
+98776,2,Orange,66.68,Fruits,76,20.90
+98776,3,Strawberry,39.48,Fruits,87,12.98
+98776,4,Papaya,65.99,Fruits,9,20.45
+98776,5,Mango,36.05,Fruits,27,29.67
+98776,6,Banana,97.39,Fruits,54,49.34
+98776,7,Lemon,85.12,Fruits,48,54.98
+98776,8,Cookie,99.53,Bakery,66,34.93
+98776,9,Baguette,41.77,Bakery,18,13.45
+98776,10,Cake,69.17,Bakery,71,36.67
+98776,11,Bun,92.9,Bakery,16,67.23
+98776,12,Egg,15.3,Dairy,56,4.65
+98776,13,Milk,77.09,Dairy,44,33.23
+98776,14,Cheese,36.81,Dairy,11,17.84
+98776,15,Pasta,17.84,Packaged Food,4,5.92
+98776,16,Canned Soup,75.94,Packaged Food,1,54.83
+98776,17,Utensils,66.71,Miscellaneous,79,33.54
+98776,18,Napkins,88.97,Miscellaneous,22,45.66
+98776,19,Baking Powder,13.86,Baking,65,4.23
+98776,20,Flour,90.68,Baking,59,58.90
+98776,21,Chocolate,28.62,Candy,50,14.33
+98776,22,Chips,93.9,Snacks,76,65.20
+98776,23,Popcorn,4.2,Snacks,41,2.34
+98776,24,Peanut Butter,50.72,Snacks,69,23.53
+98776,25,Potato,4.64,Vegetables,80,2.32
+98776,26,Lettuce,19.89,Vegetables,94,7.88
+98776,27,Gardenia,61.21,Flowers,44,32.54
