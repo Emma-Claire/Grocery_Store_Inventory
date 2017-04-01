@@ -50,5 +50,18 @@ describe "GroceryStore::Product" do
     end
   end
 
-  describe "self.find()"
+  describe "self.find(product_id)" do
+    it "returns an instance of an existing product when given a correct product_id" do
+      GroceryStore::Product.find(15).wont_be_nil
+    end
+
+    it "can find the last product from the csv" do
+      GroceryStore::Product.find(27).wont_be_nil
+    end
+
+    it "if product_id does not exist returns nil" do
+      GroceryStore::Product.find(99).must_be_nil
+    end
+
+  end
 end

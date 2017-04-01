@@ -21,10 +21,10 @@ module GroceryStore
       end
       return @products
     end
-    binding.pry
+    # binding.pry
 
     def self.find(product_id)
-      #finds a product by name
+      #finds a product
       # should retunr instance od Product
     end
 
