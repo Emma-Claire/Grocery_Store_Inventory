@@ -30,4 +30,25 @@ describe "GroceryStore::Product" do
     end
   end
 
+  describe "self.all" do
+    it "outputs an array of all products" do
+
+      products_array = GroceryStore::Product.all
+      products_array.must_be_instance_of Array
+
+      products_array.each do |product|
+        product.class.must_equal GroceryStore::Product
+      end
+
+      products_array.length.must_equal(27)
+
+      products_array[0].product_id.must_equal(1) # checking first element of array
+      products_array[0].product_name.must_equal('Apple')
+
+      products_array[26].product_id.must_equal(27) # checking last element of array
+      products_array[26].product_name.must_equal('Gardenia')
+    end
+  end
+
+  describe "self.find()"
 end

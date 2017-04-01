@@ -1,30 +1,28 @@
-#dummy data
-
-product_id,product_name,product_price,product_aisle,product_quantity,discount_price
-1,Car,83.86,Toys,12,5.98
-2,Books,66.68,Movies,76,62.02
-3,Grocery,39.48,Shoes,87,61.16
-4,Automotive,65.99,Electronics,9,10.85
-5,Games,36.05,Tools,27,46.22
-6,Outdoors,97.39,Outdoors,54,44.48
-7,Jewelery,85.12,Computers,48,53.82
-8,Sports,99.53,Books,66,8.14
-9,Jewelery,41.77,Kids,18,77.08
-10,Outdoors,69.17,Toys,71,13.55
-11,Clothing,92.9,Grocery,16,19.89
-12,Sports,15.3,Clothing,56,77.22
-13,Grocery,77.09,Home,44,40.96
-14,Automotive,36.81,Tools,11,91.33
-15,Health,17.84,Baby,4,50.58
-16,Outdoors,75.94,Baby,1,44.91
-17,Grocery,66.71,Beauty,79,68.96
-18,Automotive,88.97,Kids,22,55.14
-19,Garden,13.86,Home,65,85.82
-20,Baby,90.68,Music,59,39.82
-21,Home,28.62,Shoes,50,28.42
-22,Computers,93.9,Jewelery,76,89.66
-23,Clothing,4.2,Health,41,96.63
-24,Health,50.72,Health,69,44.49
-25,Toys,4.64,Music,80,21.73
-26,Books,19.89,Outdoors,94,55.55
-27,Garden,61.21,Kids,44,24.73
+store_id, product_id,product_name,product_price,product_aisle,product_quantity
+98776,1,Apple,83.86,Fruits,12
+98776,2,Orange,66.68,Fruits,76
+98776,3,Strawberry,39.48,Fruits,87
+98776,4,Papaya,65.99,Fruits,9
+98776,5,Mango,36.05,Fruits,27
+98776,6,Banana,97.39,Fruits,54
+98776,7,Lemon,85.12,Fruits,48
+98776,8,Cookie,99.53,Bakery,66
+98776,9,Baguette,41.77,Bakery,18
+98776,10,Cake,69.17,Bakery,71
+98776,11,Bun,92.9,Bakery,16
+98776,12,Egg,15.3,Dairy,56
+98776,13,Milk,77.09,Dairy,44
+98776,14,Cheese,36.81,Dairy,11
+98776,15,Pasta,17.84,Packaged Food,4
+98776,16,Canned Soup,75.94,Packaged Food,1
+98776,17,Utensils,66.71,Miscellaneous,79
+98776,18,Napkins,88.97,Miscellaneous,22
+98776,19,Baking Powder,13.86,Baking,65
+98776,20,Flour,90.68,Baking,59
+98776,21,Chocolate,28.62,Candy,50
+98776,22,Chips,93.9,Snacks,76
+98776,23,Popcorn,4.2,Snacks,41
+98776,24,Peanut Butter,50.72,Snacks,69
+98776,25,Potato,4.64,Vegetables,80
+98776,26,Lettuce,19.89,Vegetables,94
+98776,27,Gardenia,61.21,Flowers,44
