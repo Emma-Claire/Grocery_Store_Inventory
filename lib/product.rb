@@ -1,7 +1,7 @@
 require 'pry'
 require 'csv'
 
-module GroceryStore
+module GroceryStoreSystem
 
   class Product
     attr_accessor :store_id, :product_id, :product_name, :product_price, :product_aisle, :product_quantity, :discount_price, :discounted #allows user to manually set whether item is discounted

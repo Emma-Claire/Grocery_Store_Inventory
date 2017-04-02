@@ -1,13 +1,13 @@
 require_relative 'spec_helper'
 
-describe "GroceryStore::Product" do
+describe "GroceryStoreSystem::Product" do
 
-  let(:new_product) {GroceryStore::Product.new({store_id: 12345, product_id: 101, product_name: 'cookies', product_price: 15.0, product_aisle: 'bakery', product_quantity: 123, discount_price: 4.5, discounted: true})}
-  let(:new_product2) {GroceryStore::Product.new({store_id: 12345, product_id: 102, product_name: 'Orange', product_price: 14.0, product_aisle: 'Fruits', product_quantity: 123, discount_price: 6.5, discounted: false})}
+  let(:new_product) {GroceryStoreSystem::Product.new({store_id: 12345, product_id: 101, product_name: 'cookies', product_price: 15.0, product_aisle: 'bakery', product_quantity: 123, discount_price: 4.5, discounted: true})}
+  let(:new_product2) {GroceryStoreSystem::Product.new({store_id: 12345, product_id: 102, product_name: 'Orange', product_price: 14.0, product_aisle: 'Fruits', product_quantity: 123, discount_price: 6.5, discounted: false})}
 
   describe "#initialize" do
     it "must be an instance Product class" do
-      new_product.must_be_instance_of GroceryStore::Product
+      new_product.must_be_instance_of GroceryStoreSystem::Product
     end
 
     it "takes an integer for store_id" do
@@ -41,11 +41,11 @@ describe "GroceryStore::Product" do
   describe "self.all" do
     it "outputs an array of all products" do
 
-      products_array = GroceryStore::Product.all
+      products_array = GroceryStoreSystem::Product.all
       products_array.must_be_instance_of Array
 
       products_array.each do |product|
-        product.class.must_equal GroceryStore::Product
+        product.class.must_equal GroceryStoreSystem::Product
       end
 
       products_array.length.must_equal(27)
@@ -60,28 +60,27 @@ describe "GroceryStore::Product" do
 
   describe "self.find(product_id)" do
     it "returns an instance of an existing product when given a correct product_id" do
-      GroceryStore::Product.find(15).wont_be_nil
+      GroceryStoreSystem::Product.find(15).wont_be_nil
     end
 
     it "can find the last product from the csv" do
-      GroceryStore::Product.find(27).wont_be_nil
+      GroceryStoreSystem::Product.find(27).wont_be_nil
     end
 
     it "if product_id does not exist returns nil" do
-      GroceryStore::Product.find(99).must_be_nil
+      GroceryStoreSystem::Product.find(99).must_be_nil
     end
   end
-
+  #not sure what other tests I could add for methods below, please advise when giving feedback. Thanks!
   describe "discounted?" do
     it "returns discount_price if product is discounted" do
       new_product.discounted?.must_equal(4.5)
     end
   end
 
-    describe "current_price" do
-
-      it "returns product_price if product is not discounted" do
-        new_product2.current_price.must_equal(14.0)
-      end
+  describe "current_price" do
+    it "returns product_price if product is not discounted" do
+      new_product2.current_price.must_equal(14.0)
     end
   end
+end
