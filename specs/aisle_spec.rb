@@ -42,7 +42,17 @@ describe "GroceryStoreSystem::Aisle" do
     end
   end
 
-  describe "self.find" do
+  describe "self.find(aisle_id)" do
+    it "returns an instance of an existing aisle when given a correct aisle_id" do
+      GroceryStoreSystem::Aisle.find('B').wont_be_nil
+    end
 
+    it "can find the last Aisle from the csv" do
+      GroceryStoreSystem::Aisle.find('J').wont_be_nil
+    end
+
+    it "if aisle_id does not exist returns nil" do
+      GroceryStoreSystem::Aisle.find('Z').must_be_nil
+    end
   end
 end
