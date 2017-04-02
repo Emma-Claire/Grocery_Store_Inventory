@@ -71,6 +71,20 @@ describe "GroceryStoreSystem::Product" do
       GroceryStoreSystem::Product.find(99).must_be_nil
     end
   end
+
+  describe "find_product_by_name(product_name)" do
+    it "returns an instance of an existing product when given a correct product_name" do
+      GroceryStoreSystem::Product.find('Banana').wont_be_nil
+    end
+
+    it "can find the last product from the csv" do
+      GroceryStoreSystem::Product.find('Gardenia').wont_be_nil
+    end
+
+    it "if product_id does not exist returns nil" do
+      GroceryStoreSystem::Product.find('Soda').must_be_nil
+    end
+  end
   #not sure what other tests I could add for methods below, please advise when giving feedback. Thanks!
   describe "discounted?" do
     it "returns discount_price if product is discounted" do

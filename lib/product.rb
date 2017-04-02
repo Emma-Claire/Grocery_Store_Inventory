@@ -1,5 +1,5 @@
-require 'pry'
 require 'csv'
+require 'pry'
 
 module GroceryStoreSystem
 
@@ -25,16 +25,25 @@ module GroceryStoreSystem
     end
 
     def self.find(product_id)
-      products = Product.all
-      return products.find {|product| product.product_id == product_id}
+      products_by_id = Product.all
+      return products_by_id.find {|product| product.product_id == product_id}
     end
+
+    def find_product_by_name(product_name)
+      products_by_name = Product.all
+      return products_by_name.find {|product| product.product_name == product_name}
+    end
+
+    def find_all_products_in_aisle(aisle_name)
+      @products_in_aisle = []
+      if 
 
     def discounted?
       if @discounted == true
         return @discount_price
       end
     end
-    # binding.pry
+     binding.pry
     def current_price
       if !discounted?
         return @product_price

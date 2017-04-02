@@ -27,7 +27,7 @@ module GroceryStoreSystem
       aisles = Aisle.all
       return aisles.find {|aisle| aisle.aisle_id == aisle_id}
     end
-    #
+
     # def find_products(aisle_name)
     #   #returns all products with same aisle name
     # end
