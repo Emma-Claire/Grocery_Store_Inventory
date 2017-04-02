@@ -4,7 +4,7 @@ require 'csv'
 module GroceryStore
 
   class Product
-    attr_accessor :store_id, :product_id, :product_name, :product_price, :product_aisle, :product_quantity, :discount_price
+    attr_accessor :store_id, :product_id, :product_name, :product_price, :product_aisle, :product_quantity, :discount_price, :discounted #allows user to manually set whether item is discounted
     def initialize(product_info)
       @store_id = product_info[:store_id].to_i
       @product_id = product_info[:product_id].to_i
@@ -13,16 +13,16 @@ module GroceryStore
       @product_aisle = product_info[:product_aisle]
       @product_quantity = product_info[:product_quantity].to_i
       @discount_price = product_info[:discount_price]
+      @discounted = product_info[:discounted]
     end
 
     def self.all
       @products = []
       CSV.foreach("support/product.csv", {:headers => true}) do |line|
-        @products << self.new({store_id:line[0], product_id:line[1], product_name:line[2], product_price:line[3], product_aisle:line[4], product_quantity:line[5]})
+        @products << self.new({store_id:line[0], product_id:line[1], product_name:line[2], product_price:line[3], product_aisle:line[4], product_quantity:line[5], discount_price:line[6], discounted:line[7]})
       end
       return @products
     end
-    # binding.pry
 
     def self.find(product_id)
       products = Product.all
@@ -30,10 +30,15 @@ module GroceryStore
     end
 
     def discounted?
-        #is it on sale? if discount_price != nill then product_price = discount_price
+      if @discounted == true
+        return @discount_price
+      end
     end
+    # binding.pry
     def current_price
-
+      if !discounted?
+        return @product_price
+      end
     end
   end
 end

@@ -2,7 +2,8 @@ require_relative 'spec_helper'
 
 describe "GroceryStore::Product" do
 
-  let(:new_product) {GroceryStore::Product.new({store_id: 12345, product_id: 101, product_name: 'cookies', product_price: 15.0, product_aisle: 'bakery', product_quantity: 123, discount_price: 4.5})}
+  let(:new_product) {GroceryStore::Product.new({store_id: 12345, product_id: 101, product_name: 'cookies', product_price: 15.0, product_aisle: 'bakery', product_quantity: 123, discount_price: 4.5, discounted: true})}
+  let(:new_product2) {GroceryStore::Product.new({store_id: 12345, product_id: 102, product_name: 'Orange', product_price: 14.0, product_aisle: 'Fruits', product_quantity: 123, discount_price: 6.5, discounted: false})}
 
   describe "#initialize" do
     it "must be an instance Product class" do
@@ -30,6 +31,10 @@ describe "GroceryStore::Product" do
     end
     it "takes a float for discount_price" do
       new_product.discount_price.must_be_instance_of Float
+    end
+
+    it "takes true or false for discounted" do
+      new_product.discounted.must_be_instance_of TrueClass || FalseClass
     end
   end
 
@@ -67,14 +72,16 @@ describe "GroceryStore::Product" do
     end
   end
 
-  # describe "discounted_or_full_price" do
-  #
-  # it "returns price of product" do
-  # end
-  #
-  # it "takes in user input for discount price" do
-  # end
-  #
-  # it "overrides product_price if discount_price is given" do
-  # end
-end
+  describe "discounted?" do
+    it "returns discount_price if product is discounted" do
+      new_product.discounted?.must_equal(4.5)
+    end
+  end
+
+    describe "current_price" do
+
+      it "returns product_price if product is not discounted" do
+        new_product2.current_price.must_equal(14.0)
+      end
+    end
+  end

@@ -8,6 +8,7 @@ SimpleCov.start
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 require_relative '../lib/product'
-require_relative '../lib/sales'
-require_relative '../lib/store'
+require_relative '../lib/costumer_order'
+require_relative '../lib/grocerystore'
+require_relative '../lib/main'
 require 'csv'
