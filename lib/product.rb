@@ -29,8 +29,11 @@ module GroceryStore
       return products.find {|product| product.product_id == product_id}
     end
 
-    def discounted_or_full_price
+    def discounted?
         #is it on sale? if discount_price != nill then product_price = discount_price
+    end
+    def current_price
+
     end
   end
 end

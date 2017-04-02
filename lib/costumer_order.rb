@@ -1,7 +1,7 @@
 module GroceryStore
-  class Sale
-    def initialize(collection_of_prod_ids)
-      @sold_products = collection_of_prod_ids.map { |id| Product.find(id)}
+  class CostumerOrder
+    def initialize(product_ids)
+      @costumer_products = collection_of_prod_ids.map { |id| Product.find(id)}
     end
 
     def costumer_total

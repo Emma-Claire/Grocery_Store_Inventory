@@ -2,11 +2,15 @@ require 'csv'
 module GroceryStore
 
   class Aisle
-    attr_accessor :name, :products, :product_aisle
-    def initialize(name)
-      @name = name
-      @products = nil
-      @product_aisle = product_aisle
+    attr_accessor :product_id, :product_name, :aisle_id, :aisle_name, :product_quantity
+    attr_reader :store_id
+    def initialize(aisle_info)
+      @store_id = aisle_info[:store_id]
+      @product_id = aisle_info[:product_id]
+      @product_name = aisle_info[:product_name]
+      @aisle_id = aisle_info[:aisle_id]
+      @aisle_name = aisle_info[:aisle_name]
+      @product_quantity = aisle_info[:product_quantity]
 
     end
 
@@ -18,12 +22,6 @@ module GroceryStore
     end
 
     def find_products(product_aisle)
-      products = Product.all
-      @aisle_products = []
-      if products.find {|product| product.product_aisle == product_aisle}
-        @aisle_products << product
-        return @aisle_products
-      end
 
     end
   end
