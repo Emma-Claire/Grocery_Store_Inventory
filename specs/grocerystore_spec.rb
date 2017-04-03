@@ -15,5 +15,14 @@ describe "GroceryStoreSystem::MyGroceryStore" do
     end
   end
 
-  describe "add_aisle"do
+  # describe "add_aisle" do
+  #   it "must return an array of aisle" do
+  #     GroceryStoreSystem::MyGroceryStore.(87634, "anotherone").add_aisle.must_be_instance_of Array
+  #   end
+  # end
+  # #
+  # describe "add_product" do
+  #   it "must return an array of products"
+  #   GroceryStoreSystem::MyGroceryStore.new.(634, "another").add_product.must_be_instance_of Array
+  # end
 end

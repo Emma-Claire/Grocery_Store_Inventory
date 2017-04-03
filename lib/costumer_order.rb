@@ -1,3 +1,4 @@
+require 'csv'
 module GroceryStore
   class CostumerOrder
     attr_accessor :costumer_products

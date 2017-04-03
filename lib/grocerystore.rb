@@ -3,7 +3,7 @@ module GroceryStoreSystem
   class MyGroceryStore
     attr_accessor :new_aisles, :new_products
     attr_reader :store_id, :store_name
-    def initialize (store_id, store_name)
+    def initialize(store_id, store_name)
       @store_id = store_id
       @store_name = store_name
       @new_aisles = []
