@@ -1,16 +1,17 @@
 module GroceryStore
   class CostumerOrder
+    attr_accessor :costumer_products
     def initialize(product_ids)
-      @costumer_products = collection_of_prod_ids.map { |id| Product.find(id)}
+      @costumer_products = prod_ids.map { |id| Product.find(id)}
     end
 
     def costumer_total
       #takes list of product_ids and returns total product_price
-      @sold_products.reduce{ |instance| instance.product_price }
+      @costumer_products.reduce{ |instance| instance.discounted? }
     end
 
     def costumer_savings
-      #costumer_total - discount_price, undiscounted sold_products must be nill
+      return costumer_total 
     end
   end
 end

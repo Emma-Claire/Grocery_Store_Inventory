@@ -28,22 +28,13 @@ module GroceryStoreSystem
       return aisles.find {|aisle| aisle.aisle_id == aisle_id}
     end
 
-    # def find_products(aisle_name)
-    #   #returns all products with same aisle name
-    # end
-    #
     # def update_quantity_of_purchased_products
     #   #calls on costumer_order method .each product_quantity do -1
     # end
   end
 end
 
-# store a collection of products
 
-#----csv file
-
-
-# find products in a specific aisle
 # given a customer order (list of product IDs), be able to
 # calculate the total price of the order
 # calculate the total savings

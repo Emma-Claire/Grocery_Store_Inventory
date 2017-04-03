@@ -1,11 +1,11 @@
 store_id, product_id,product_name,aisle_id,aisle_name,product_quantity
-98776,A,Fruits,Stores Fruits and Nuts
-98776,B,Bakery,Stores Baked Goods
-98776,C,Dairy,Stores Dairy Products
-98776,D,Packaged Food,Stores Packaged Foods And Cans
-98776,E,Miscellaneous,Stores Paper Products As Well As Untensils And Packaging
-98776,F,Baking,Stores Baking Supplies And Products
-98776,G,Candy,Stores Candy
-98776,H,Snacks,Stores Snacks
-98776,I,Vegetables,Stores Vegetables
-98776,J,Flowers,Stores Plants Vases And Cards
+98776,A,Fruits
+98776,B,Bakery
+98776,C,Dairy
+98776,D,Packaged Food
+98776,E,Miscellaneous
+98776,F,Baking
+98776,G,Candy
+98776,H,Snacks
+98776,I,Vegetables
+98776,J,Flowers

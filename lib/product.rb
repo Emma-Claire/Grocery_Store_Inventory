@@ -29,25 +29,33 @@ module GroceryStoreSystem
       return products_by_id.find {|product| product.product_id == product_id}
     end
 
-    def find_product_by_name(product_name)
-      products_by_name = Product.all
-      return products_by_name.find {|product| product.product_name == product_name}
-    end
+    def update_quantity(number_of_items)
 
-    def find_all_products_in_aisle(aisle_name)
-      @products_in_aisle = []
-      if 
-
-    def discounted?
-      if @discounted == true
-        return @discount_price
+      if number_of_items > @product_quantity
+        number_of_items = @product_quantity
       end
+      @product_quantity -= number_of_items
     end
-     binding.pry
-    def current_price
-      if !discounted?
+
+    def find_all_products_in_same_aisle(aisle_name)
+      @products_in_aisle = []
+      self.all.each do |product|
+        @products_in_aisle <<  product if product.aisle_name==aisle_name
+      end
+
+      def discounted
+        if @discounted == false
+          return @product_price
+        else
+          return @discount_price
+        end
+      end
+
+      def current_price
+        !discounted?
         return @product_price
       end
     end
   end
 end
+# binding.pry

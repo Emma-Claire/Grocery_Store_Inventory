@@ -72,29 +72,47 @@ describe "GroceryStoreSystem::Product" do
     end
   end
 
-  describe "find_product_by_name(product_name)" do
-    it "returns an instance of an existing product when given a correct product_name" do
-      GroceryStoreSystem::Product.find('Banana').wont_be_nil
-    end
+  # describe "find_product_by_name(product_name)" do
+  #   it "returns an instance of an existing product when given a correct product_name" do
+  #     GroceryStoreSystem::Product.find('Banana').wont_be_nil
+  #   end
 
-    it "can find the last product from the csv" do
-      GroceryStoreSystem::Product.find('Gardenia').wont_be_nil
-    end
+  #   it "can find the last product from the csv" do
+  #     GroceryStoreSystem::Product.find('Gardenia').wont_be_nil
+  #   end
+  #
+  #   it "if product_id does not exist returns nil" do
+  #     GroceryStoreSystem::Product.find('Soda').must_be_nil
+  #   end
+  # end
+  describe "update_quantity"do
+  it "takes a number" do
+    GroceryStoreSystem::Product.update_quantity(number_of_items).must_be_kind_of Integer
+  end
+  it "updated the quantity if item is purchased" do
+    number_of_items = 6
+    product_quantity = 123
+    update_quantity = product_quantity - number_of_items
 
-    it "if product_id does not exist returns nil" do
-      GroceryStoreSystem::Product.find('Soda').must_be_nil
-    end
+   new_product.product_quantity.must_equal 117
   end
-  #not sure what other tests I could add for methods below, please advise when giving feedback. Thanks!
-  describe "discounted?" do
-    it "returns discount_price if product is discounted" do
-      new_product.discounted?.must_equal(4.5)
-    end
-  end
+end
 
-  describe "current_price" do
-    it "returns product_price if product is not discounted" do
-      new_product2.current_price.must_equal(14.0)
-    end
+describe "find_all_products_in_same_aisle" do
+  it "returns products associated with an instance of aisle" do
+    GroceryStoreSystem::Product.all.first.product_name.must_equal('Apple')
   end
+end
+#not sure what other tests I could add for methods below, please advise when giving feedback. Thanks!
+describe "discounted?" do
+  it "returns discount_price if product is discounted" do
+    new_product.discounted.must_equal true
+  end
+end
+
+describe "current_price" do
+  it "returns product_price if product is not discounted" do
+    new_product2.current_price.must_equal(14.0)
+  end
+end
 end
