@@ -9,9 +9,5 @@ module GroceryStore
       #takes list of product_ids and returns total product_price
       @costumer_products.reduce{ |instance| instance.discounted? }
     end
-
-    def costumer_savings
-      return costumer_total 
-    end
   end
 end

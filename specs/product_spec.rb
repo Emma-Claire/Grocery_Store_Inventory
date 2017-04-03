@@ -87,14 +87,14 @@ describe "GroceryStoreSystem::Product" do
   # end
   describe "update_quantity"do
   it "takes a number" do
-    GroceryStoreSystem::Product.update_quantity(number_of_items).must_be_kind_of Integer
+    new_product.update_quantity(6).must_be_kind_of Integer
   end
   it "updated the quantity if item is purchased" do
     number_of_items = 6
     product_quantity = 123
     update_quantity = product_quantity - number_of_items
 
-   new_product.product_quantity.must_equal 117
+    new_product.product_quantity.must_equal 117
   end
 end
 
@@ -105,14 +105,16 @@ describe "find_all_products_in_same_aisle" do
 end
 #not sure what other tests I could add for methods below, please advise when giving feedback. Thanks!
 describe "discounted?" do
-  it "returns discount_price if product is discounted" do
-    new_product.discounted.must_equal true
+  it "returns whether product is discounted" do
+    new_product.discounted.must_be_instance_of TrueClass
+    new_product2.discounted.must_be_instance_of FalseClass
   end
 end
 
 describe "current_price" do
+#not sure why this test started giving error after initally passing.
   it "returns product_price if product is not discounted" do
-    new_product2.current_price.must_equal(14.0)
+    new_product2.current_price.must_equal 14.0
   end
 end
 end

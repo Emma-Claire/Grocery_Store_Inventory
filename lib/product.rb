@@ -43,17 +43,16 @@ module GroceryStoreSystem
         @products_in_aisle <<  product if product.aisle_name==aisle_name
       end
 
-      def discounted
-        if @discounted == false
-          return @product_price
-        else
+      def discounted?
+        if @discounted == true
           return @discount_price
         end
       end
 
-      def current_price
-        !discounted?
-        return @product_price
+      def self.current_price
+        if !discounted?
+          return @product_price
+        end
       end
     end
   end

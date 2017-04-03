@@ -27,10 +27,6 @@ module GroceryStoreSystem
       aisles = Aisle.all
       return aisles.find {|aisle| aisle.aisle_id == aisle_id}
     end
-
-    # def update_quantity_of_purchased_products
-    #   #calls on costumer_order method .each product_quantity do -1
-    # end
   end
 end
 
